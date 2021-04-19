@@ -328,5 +328,6 @@ def main(args):
 
 if __name__ == "__main__":
     args = parse_args()
+    torch.cuda.set_device(args.local_rank)
     main(args)
 

@@ -70,6 +70,7 @@ def parse_args():
     parser.add_argument('--resume', default='', help='resume from checkpoint')
     parser.add_argument("--test-only", dest="test_only", help="Only test the model", action="store_true")
     parser.add_argument("--pretrained", dest="pretrained", help="Use pre-trained models (only supported for fcn_resnet101)", action="store_true")
+    parser.add_argument("--local_rank", type=int, default=0)
 
     # distributed training parameters
     parser.add_argument('--world-size', default=1, type=int,
@@ -328,6 +329,5 @@ def main(args):
 
 if __name__ == "__main__":
     args = parse_args()
-    torch.cuda.set_device(args.local_rank)
     main(args)
 

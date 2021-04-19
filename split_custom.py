@@ -18,8 +18,8 @@ ap.add_argument("-m", "--masks", type=str, required=True,
 ap.add_argument("-o", "--output", type=str, required=True,
                 help="path to where the split dataset should be stored")
 
-ap.add_argument("--image-format", dest="image_format", type=str, default="jpg",
-                help="image format, defaults to jpg")
+ap.add_argument("--image-format", dest="image_format", type=str, default="png",
+                help="image format, defaults to png")
 
 ap.add_argument("--mask-format", dest="mask_format", type=str, default="png",
                 help="mask format, defaults to png")

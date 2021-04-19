@@ -40,11 +40,11 @@ def parse_args():
 
     parser.add_argument('data', metavar='DIR', help='path to dataset')
     parser.add_argument('--dataset', default='custom', help='dataset type: voc, voc_aug, coco, cityscapes, deepscene, mhp, nyu, sun, custom (default: voc)')
-    parser.add_argument('-a', '--arch', metavar='ARCH', default='fcn_resnet18',
+    parser.add_argument('-a', '--arch', metavar='ARCH', default='fcn_resnet50',
                         choices=model_names,
                         help='model architecture: ' +
                         ' | '.join(model_names) +
-                        ' (default: fcn_resnet18)')
+                        ' (default: fcn_resnet50)')
     parser.add_argument('--classes', default=21, type=int, metavar='C', help='number of classes in your dataset (outputs)')
     parser.add_argument('--aux-loss', action='store_true', help='train with auxilliary loss')
     parser.add_argument('--resolution', default=320, type=int, metavar='N',

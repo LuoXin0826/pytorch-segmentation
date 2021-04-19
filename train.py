@@ -50,10 +50,10 @@ def parse_args():
     parser.add_argument('--resolution', default=320, type=int, metavar='N',
                         help='NxN resolution used for scaling the training dataset (default: 320x320) '
                          'to specify a non-square resolution, use the --width and --height options')
-    parser.add_argument('--width', default=argparse.SUPPRESS, type=int, metavar='X',
-                        help='desired width of the training dataset. if this option is not set, --resolution will be used')
-    parser.add_argument('--height', default=argparse.SUPPRESS, type=int, metavar='Y',
-                        help='desired height of the training dataset. if this option is not set, --resolution will be used')
+    parser.add_argument('--width', default=640, type=int, metavar='X',
+                        help='desired width of the training dataset.')
+    parser.add_argument('--height', default=480, type=int, metavar='Y',
+                        help='desired height of the training dataset.')
     parser.add_argument('--device', default='cuda', help='device')
     parser.add_argument('-b', '--batch-size', default=4, type=int)
     parser.add_argument('--epochs', default=30, type=int, metavar='N', help='number of total epochs to run')
